@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            margin: 0;
+        }
         p{
             border: 1px solid black;
             padding: 15px;
@@ -25,18 +28,30 @@
 
         .tablero{
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
-            border: 1px solid black;
-            gap: 5px;
-            height: 620px;
-            width: 620px;
+            width: 605px;
             margin: 0 auto;
+            margin-top: 10px;
+            text-align: center;
         }
         .casilla{
             border: 1px solid black;
             height: 200px;
             width: 200px;
             font-size: 200px;
+            cursor: pointer;
+        }
+        .casilla:hover{
+            background-color: #b6b6b6;
+        }
+        button {
+            color: green;
+            background-color: aqua;
+            padding: 10px;
+        }
+        #p-resultados{
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -51,6 +66,9 @@
         <div class="casilla" onclick="agregarFicha(6)"></div>
         <div class="casilla" onclick="agregarFicha(7)"></div>
         <div class="casilla" onclick="agregarFicha(8)"></div>
+    </div>
+    <div id="resultados">
+        <p id="p-resultados"></p>
     </div>
 </body>
 <script src="tictactoe.js"></script>
